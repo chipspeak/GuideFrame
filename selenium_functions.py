@@ -14,7 +14,7 @@ Additional functions will be added as they are required before a doc is prepared
 '''
 
 # Function to setup the driver and return it for initialization in main scripts
-def driver_setup():
+def driver_setup(driver_location):
     # Setting up with Chrome options and the ChromeDriver service
     options = Options()
     options.add_argument("usr/bin/google-chrome")
@@ -24,7 +24,7 @@ def driver_setup():
     options.add_experimental_option("useAutomationExtension", False)
 
     # Specify the path to ChromeDriver
-    service = Service('/opt/homebrew/bin/chromedriver')
+    service = Service(driver_location) 
 
     # Initialize the WebDriver
     driver = webdriver.Chrome(service=service, options=options)

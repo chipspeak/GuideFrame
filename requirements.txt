@@ -1,0 +1,8 @@
+ffmpeg
+xvfb
+chromium-driver
+chromium-browser
+pip install selenium
+ffmpeg-python
+mutagen
+gTTS

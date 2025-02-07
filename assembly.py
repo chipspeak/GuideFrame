@@ -43,7 +43,7 @@ def combine_all_videos(output_files, final_output):
 
     try:
         # Run FFmpeg using the concat method and check for errors etc
-        ffmpeg.input(file_list, format="concat", safe=0).output(final_output, vcodec='libx264', acodec='aac').run()
+        ffmpeg.input(file_list, format="concat", safe=0).output(final_output, vcodec='libxvid', acodec='aac').run()
         print(f"Successfully combined all videos into {final_output}")
     except ffmpeg.Error as e:
         error_output = e.stderr.decode('utf-8') if e.stderr else "No error details available."
